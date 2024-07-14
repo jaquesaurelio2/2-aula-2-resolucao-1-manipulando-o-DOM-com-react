@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Manipulando o DOM com React!</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+      const app = document.getElementById("app");
+      const root = ReactDOM.createRoot(app);
+
+      function Header() {
+        return (
+          <>
+            <header>
+              <img
+                src="./images/react-logo.png"
+                alt="Logo React"
+                width="80px"
+              />
+            </header>
+            <main>
+              <h1>Motivos para aprender React</h1>
+              <ol>
+                <li>Fácil de aprender</li>
+                <li>Biblioteca muito popular em alta no mercado</li>
+                <li>
+                  Tenho mais chances de conseguir um emprego como desenvolvedor
+                  se eu sei React
+                </li>
+              </ol>
+            </main>
+            <footer>
+              <small>
+                @ 2024 FAST - CESAR School. Todos os direitos reservados.
+              </small>
+            </footer>
+          </>
+        );
+      }
+
+      root.render(<Header />);
+    </script>
+  </body>
+</html>
